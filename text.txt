@@ -1,0 +1,49 @@
+		int replyPort = searchList.get(2*cordinatorPort).get(1);
+			if (portNumbers.contains(2*replyPort) && 2*replyPort != receivedPort) {
+					Log.e(TAG, String.format("query: emergency on prev port try chaining [%s], key [%s]", replyPort, selection));
+					value = new ClientTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, msg, String.valueOf(replyPort * 2)).get();
+			replyPort = searchList.get(2*cordinatorPort).get(0);
+			if(value == null && portNumbers.contains(2*replyPort) && 2*replyPort != receivedPort)
+					Log.e(TAG, String.format("query: emergency on prev port try chaining [%s], key [%s]", replyPort, selection));
+					value = new ClientTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, msg, String.valueOf(replyPort * 2)).get();
+					Log.e(TAG, String.format("query: emergency on prev port try chaining [%s], key [%s]", replyPort, selection));
+					value = new ClientTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, msg, String.valueOf(replyPort * 2)).get();
+						int replyPort = searchList.get(cordinatorPort).get(1);
+						Log.e(TAG, String.format("query: must query[%s] and myport [%s] and cordinator[%s] for key[%s]", replyPort, myPort, cordinatorPort, selection));
+						if (replyPort * 2 == myPort) {
+								replyPort = searchList.get(cordinatorPort).get(0);
+								if (portNumbers.contains(replyPort * 2) && receivedPort != replyPort * 2 && 2*replyPort != myPort) {
+									Log.e(TAG, "query: trying chaing when it failed in my data" + replyPort);
+									value = new ClientTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, msg, String.valueOf(replyPort * 2)).get();
+										replyPort = cordinatorPort;
+										if (portNumbers.contains(replyPort * 2) && receivedPort != replyPort * 2 && 2*replyPort != myPort) {
+											Log.e(TAG, "query: trying chaing when it failed in my data" + replyPort);
+											value = new ClientTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, msg, String.valueOf(replyPort * 2)).get();
+									replyPort = cordinatorPort;
+									if (portNumbers.contains(replyPort * 2) && receivedPort != replyPort * 2 && 2*replyPort != myPort) {
+										Log.e(TAG, "query: trying chaing when it failed  in my data coordinator" + replyPort);
+										value = new ClientTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, msg, String.valueOf(replyPort * 2)).get();
+								if (portNumbers.contains(replyPort * 2) && receivedPort != replyPort * 2) {
+									value = new ClientTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, msg, String.valueOf(replyPort * 2)).get();
+										replyPort = searchList.get(cordinatorPort).get(0);
+										if (portNumbers.contains(replyPort * 2) && receivedPort != replyPort * 2) {
+											Log.e(TAG, "query: trying chaing when it failed " + replyPort);
+											value = new ClientTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, msg, String.valueOf(replyPort * 2)).get();
+									replyPort = searchList.get(cordinatorPort).get(0);
+									if (portNumbers.contains(replyPort * 2) && receivedPort != replyPort * 2) {
+										Log.e(TAG, "query: trying chaining " + replyPort);
+										value = new ClientTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, msg, String.valueOf(replyPort * 2)).get();
+							if (portNumbers.contains(replyPort * 2) && receivedPort != replyPort*2) {
+								value = new ClientTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, msg, String.valueOf(replyPort * 2)).get();
+									int replyPort = searchList.get(cordinatorPort).get(0);
+									if (portNumbers.contains(replyPort * 2) && receivedPort != replyPort*2 && 2*replyPort != myPort) {
+										Log.e(TAG, "query: trying chaing when it failed in my data" + replyPort);
+										value = new ClientTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, msgQ, String.valueOf(replyPort * 2)).get();
+											replyPort = cordinatorPort;
+											if (portNumbers.contains(replyPort * 2) && receivedPort != replyPort*2 && 2*replyPort != myPort)  {
+												Log.e(TAG, "query: trying chaing when it failed in my data" + replyPort);
+												value = new ClientTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, msgQ, String.valueOf(replyPort * 2)).get();
+										replyPort = cordinatorPort;
+										if (portNumbers.contains(replyPort * 2) && receivedPort != replyPort*2 && 2*replyPort != myPort) {
+											Log.e(TAG, "query: trying chaing when it failed  in my data coordinator" + replyPort);
+											value = new ClientTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, msgQ, String.valueOf(replyPort * 2)).get();
